@@ -86,6 +86,4 @@ This project is a **CV** designed to create a professional and responsive online
    ```
 
 ## Demo
-
-1. Clone the repository:
 [here](https://cv-qjok.onrender.com/)

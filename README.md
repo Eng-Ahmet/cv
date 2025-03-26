@@ -88,5 +88,4 @@ This project is a **CV** designed to create a professional and responsive online
 ## Demo
 
 1. Clone the repository:
-  [here](https://cv-generator-cag2.onrender.com)
-
+[here](https://cv-qjok.onrender.com/)

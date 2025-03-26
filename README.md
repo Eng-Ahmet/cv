@@ -84,3 +84,9 @@ This project is a **CV Generator** designed to create a professional and respons
    ```bash
    git clone https://github.com/your-username/cv-generator.git
    ```
+
+## Demo
+
+1. Clone the repository:
+  [here](https://cv-generator-cag2.onrender.com)
+

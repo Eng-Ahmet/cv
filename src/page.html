@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Resume</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Remove Materialize CSS -->
+    <!--  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar-fixed hide-on-large-only">
+        <nav class="grey darken-3 z-depth-3">
+          <div
+            class="nav-wrapper"
+            style="
+              display: flex;
+              justify-content: space-between;
+              padding: 0 15px;
+            "
+          >
+            <a href="#" data-target="cv-nav" class="sidenav-trigger">
+              <i class="fas fa-bars"></i> Menu
+            </a>
+            <a href="#"> HWAI Technology </a>
+          </div>
+        </nav>
+      </div>
+      <ul
+        id="cv-nav"
+        class="sidenav sidenav-fixed center-align grey darken-3 z-depth-3"
+      >
+        <li class="cv-title light-green">
+          <a class="cv-spclink waves-effect waves-light" data-target="fullname"
+            >Ahmet Asaad Hammoud</a
+          >
+        </li>
+        <li class="cv-title">
+          <a
+            class="light-green-text waves-effect waves-light"
+            data-target="objective"
+            >Career Objective</a
+          >
+        </li>
+        <li class="cv-title">
+          <a
+            class="light-green-text waves-effect waves-light"
+            data-target="skill"
+            >Technical Skills</a
+          >
+        </li>
+        <li class="cv-title">
+          <a
+            class="light-green-text waves-effect waves-light"
+            data-target="experience"
+            >Experience</a
+          >
+        </li>
+        <li class="cv-title">
+          <a
+            class="light-green-text waves-effect waves-light"
+            data-target="education"
+            >Education</a
+          >
+        </li>
+        <li class="cv-title">
+          <a
+            class="light-green-text waves-effect waves-light"
+            data-target="honoraward"
+            >Honors/Awards</a
+          >
+        </li>
+        <li class="cv-title white">
+          <a
+            class="light-green-text text-darken-4 waves-effect waves-green"
+            onclick="exportToPDF()"
+            >Download as PDF</a
+          >
+        </li>
+      </ul>
+    </header>
+    <main class="cv-nonprintable">
+      <div class="cv-wrapper container">
+        <div class="card z-depth-4 center grey lighten-3" id="cv-card">
+          <div class="divider cv-topborder light-green"></div>
+          <div id="fullname" class="row scrollspy">
+            <div class="card-content cv-header">
+              <div class="col s6 l3 offset-s3">
+                <div class="cv-photowrapper white z-depth-2">
+                  <img
+                    src="/src/image/ahmet.jpg"
+                    alt="Ahmet Asaad Hammoud"
+                    class="responsive-img"
+                  />
+                </div>
+              </div>
+              <div class="col s12 l9 cv-pinfogroup">
+                <div>
+                  <span class="card-title cv-fullname cv-title"
+                    >Ahmet Asaad Hammoud</span
+                  >
+                </div>
+                <div class="cv-personalinfo">
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-briefcase yellow-text text-darken-4"></i>
+                    SOFTWARE ENGINEER, 25 yrs old
+                  </div>
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-map-marker-alt pink-text"></i>
+                    Malaga, Spain
+                  </div>
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-phone indigo-text"></i>
+                    +34 672 852 230
+                  </div>
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-envelope green-text"></i>
+                    a.h.ahmet.es@gmail.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider grey"></div>
+          <div class="card-content cv-body white center">
+            <div id="objective" class="row scrollspy">
+              <div class="cv-title text-right col s12 l3">Career Objective</div>
+              <div class="text-left col s12 l9">
+                <div class="col s12 l12 cv-co">
+                  To leverage my expertise in software engineering and web
+                  development to contribute to innovative projects, enhance user
+                  experiences, and integrate cutting-edge technologies like
+                  artificial intelligence into practical solutions.
+                </div>
+              </div>
+            </div>
+            <div id="skill" class="row scrollspy">
+              <div class="cv-title text-right col s12 l3">Technical Skills</div>
+              <div class="text-left col s12 l9">
+                <div class="col s12 l12">
+                  <div class="cv-subtitle light-green-text text-darken-3">
+                    Programming Languages
+                  </div>
+                  <div class="col s12 l4">
+                    <span class="cv-listtitle">Web</span>
+                    <ul class="cv-list browser-default">
+                      <li>Angular</li>
+                      <li>Vue.js</li>
+                      <li>Bootstrap</li>
+                      <li>jQuery</li>
+                      <li>HTML, CSS, JS</li>
+                    </ul>
+
+                    <span class="cv-listtitle">Testing</span>
+                    <ul class="cv-list browser-default">
+                      <li>Jest</li>
+                      <li>PHPUnit</li>
+                      <li>Selenium</li>
+                    </ul>
+
+                    <span class="cv-listtitle">IoT & MQTT</span>
+                    <ul class="cv-list browser-default">
+                      <li>MQTT</li>
+                      <li>IOT</li>
+                    </ul>
+
+                    <span class="cv-listtitle"
+                      >Data & Mathematical Techniques</span
+                    >
+                    <ul class="cv-list browser-default">
+                      <li>Data Analysis</li>
+                      <li>Mathematical Techniques</li>
+                    </ul>
+                  </div>
+
+                  <div class="col s12 l4">
+                    <span class="cv-listtitle">Backend</span>
+                    <ul class="cv-list browser-default">
+                      <li>Node.js</li>
+                      <li>Java Spring Boot</li>
+                      <li>Slim (PHP)</li>
+                      <li>Symfony</li>
+                      <li>Ruby on Rails</li>
+                      <li>Go (Gin Framework)</li>
+                      <li>play Framework</li>
+                    </ul>
+                    <span class="cv-listtitle">Database</span>
+                    <ul class="cv-list browser-default">
+                      <li>MySQL</li>
+                      <li>PostgreSQL</li>
+                      <li>SQLite</li>
+                      <li>Redis</li>
+                      <li>SQLite</li>
+                      <li>SQL Server</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </div>
+                  <div class="col s12 l4">
+                    <span class="cv-listtitle">Programming Languages</span>
+                    <ul class="cv-list browser-default">
+                      <li>C / C++ / C#</li>
+                      <li>Python</li>
+                      <li>Scala</li>
+                    </ul>
+
+                    <span class="cv-listtitle">Machine Learning & AI</span>
+                    <ul class="cv-list browser-default">
+                      <li>Machine Learning</li>
+                      <li>scikit-learn</li>
+                      <li>PyTorch</li>
+                    </ul>
+
+                    <span class="cv-listtitle">Cloud & Serverless</span>
+                    <ul class="cv-list browser-default">
+                      <li>Google Cloud</li>
+                      <li>Serverless Computing</li>
+                    </ul>
+
+                    <span class="cv-listtitle">Architecture</span>
+                    <ul class="cv-list browser-default">
+                      <li>Microservices Architecture</li>
+                      <li>Event-Driven Architecture</li>
+                      <li>Clean Code Architecture</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="experience" class="row scrollspy">
+              <div class="cv-title text-right col s12 l3">WORK EXPERIENCE</div>
+              <div class="text-left col s12 l9">
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >MATHEMATICS AND PROGRAMMING TEACHER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2021-01 - 2021-05"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">
+                    INTERNATIONAL STUDENTS GATHERED AT FIRAT UNIVERSITY
+                  </div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Taught Mathematics 1-2 courses, differential equations,
+                        statistics, and probability to 100 students at Al-Furat
+                        University. Additionally, provided lessons to first and
+                        second-year students in the Faculty of Mathematics.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >HEAD OF THE ARTIFICIAL INTELLIGENCE TEAM (PRACTIC)</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2022-12 - 2023-03"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">FIRAT UNIVERSITY</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Supervised two projects as the leader of teams
+                        representing the university in the international
+                        Teknofest competition. Prepared two projects in
+                        artificial intelligence:
+                      </li>
+                      <li>First project: Focused on assisting blind people.</li>
+                      <li>
+                        Second project: Aimed at integrating AI into the
+                        agricultural sector.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2023-03 - 2023-08"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">TAM-MED PRIVATE HOSPITAL</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Developed a comprehensive system for the hospital,
+                        including:
+                        <ul>
+                          <li>Home page</li>
+                          <li>Appointment booking platform</li>
+                          <li>Distance learning platform for hospital staff</li>
+                          <li>
+                            Live chat service for direct communication with the
+                            information office
+                          </li>
+                          <li>Statistics system and other features</li>
+                        </ul>
+                      </li>
+                      <li>
+                        The website attracted over 12,500 visitors within two
+                        weeks of launch.
+                      </li>
+                      <li>Website link: tam-med.com.tr</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2023-08 - 2023-12"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">SPANISH STORES</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>Designed two simultaneous websites:</li>
+                      <li>A system for a mobile phone store.</li>
+                      <li>
+                        A system for a grocery store with electronic payment
+                        functionality and shipment tracking.
+                      </li>
+                      <li>
+                        Both sites were responsive and available in four
+                        languages: Arabic, Turkish, English, and Spanish.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2023-12 - 2024-02"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">
+                    TURKISH RESTAURANT IN TÜRKİYE
+                  </div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Developed a system for a Turkish restaurant in Istanbul,
+                        featuring:
+                      </li>
+                      <li>Table reservation</li>
+                      <li>Order delivery</li>
+                      <li>Statistics for the restaurant owner</li>
+                      <li>Employee management</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2024-03 - 2024-08"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">RELEEVANT</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Designed and developed all user interfaces and
+                        algorithms for slot games.
+                      </li>
+                      <li>
+                        Ensured optimal functionality and user experience
+                        through extensive testing and iteration.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="education" class="row scrollspy">
+              <div class="cv-title text-right col s12 l3">Education</div>
+              <div class="text-left col s12 l9">
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >Firat University</span
+                  ><span class="cv-spctext grey-text">Turkey</span>
+                  <span
+                    class="new badge light-green"
+                    data-badge-caption="2020-01 - 2024-01"
+                  ></span>
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Bachelor's Degree in Software Engineering</span
+                    >
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >University of Malaga</span
+                  ><span class="cv-spctext grey-text">Spain</span>
+                  <span
+                    class="new badge light-green"
+                    data-badge-caption="2020-01 - Present"
+                  ></span>
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Bachelor's Degree in Software Engineering</span
+                    >
+                  </div>
+                </div>
+              </div>
+     
+            </div>
+            <div id="honoraward" class="row scrollspy">
+              <div class="cv-title text-right col s12 l3">Honors/Awards</div>
+              <div class="text-left col s12 l9">
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >Academic</span
+                  >
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Consistent Dean's Lister for 6 semesters.</span
+                    >
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >National Collegiate Competition</span
+                  >
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Won as 2<sup>nd</sup> runner-up in Into Programming
+                      Senior Division in STI Tagisan ng Talino-Nationals
+                      Finals.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cv-backtotop" class="fixed-action-btn hide">
+        <a
+          href="#fullname"
+          class="btn-floating btn-large deep-orange hoverable"
+        >
+          <i class="fas fa-arrow-up"></i>
+        </a>
+
+        <ul></ul>
+      </div>
+    </main>
+
+    <!-- for printing -->
+    <main class="cv-printable">
+      <div class="cv-wrapper container">
+        <div class="center">
+          <div id="fullname" class="row scrollspy">
+            <div class="cv-header">
+              <div class="col s3 l3">
+                <div class="cv-photowrapper white">
+                  <img
+                    src="/src/image/ahmet.jpg"
+                    alt="Ahmet Asaad Hammoud"
+                    class="responsive-img"
+                  />
+                </div>
+              </div>
+              <div class="col s9 l9 cv-pinfogroup">
+                <div>
+                  <span class="card-title cv-fullname cv-title"
+                    >Ahmet Asaad Hammoud</span
+                  >
+                </div>
+                <div class="cv-personalinfo">
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-briefcase yellow-text text-darken-4"></i>
+                    SOFTWARE ENGINEER, 25 yrs old
+                  </div>
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-map-marker-alt pink-text"></i>
+                    Malaga, Spain
+                  </div>
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-phone indigo-text"></i>
+                    +34 672 852 230
+                  </div>
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    <i class="fas fa-envelope green-text"></i>
+                    a.h.ahmet.es@gmail.com
+                  </div>
+
+                  <div class="grey-text text-darken-2 col s12 l12">
+                    View CV Online through this link:
+                    <a href="https://codepen.io/jkris/full/WoLJxq/"
+                      >https://codepen.io/jkris/full/WoLJxq/</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider grey"></div>
+          <div class="card-content cv-body white center">
+            <div id="objective" class="row scrollspy">
+              <div class="cv-title text-right col s3 l3">Career Objective</div>
+              <div class="text-left col s9 l9">
+                <div class="col s12 l12 cv-co">
+                  To leverage my expertise in software engineering and web
+                  development to contribute to innovative projects, enhance user
+                  experiences, and integrate cutting-edge technologies like
+                  artificial intelligence into practical solutions.
+                </div>
+              </div>
+            </div>
+            <div id="skill" class="row scrollspy">
+              <div class="cv-title text-right col s3 l3">Technical Skills</div>
+              <div class="text-left col s9 l9">
+                <div class="col s12 l12">
+                  <div class="cv-subtitle light-green-text text-darken-3">
+                    Programming Languages
+                  </div>
+                  <div class="col s6 l6">
+                    <span class="cv-listtitle">Web</span>
+                    <ul class="cv-list browser-default">
+                      <li>Angular</li>
+                      <li>Vue.js</li>
+                      <li>HTML, CSS, JavaScript</li>
+                    </ul>
+                  </div>
+                  <div class="col s6 l6">
+                    <span class="cv-listtitle">Backend</span>
+                    <ul class="cv-list browser-default">
+                      <li>Node.js</li>
+                      <li>Symfony</li>
+                      <li>Ruby on Rails</li>
+                      <li>Go (Gin Framework)</li>
+                    </ul>
+                    <span class="cv-listtitle">Database</span>
+                    <ul class="cv-list browser-default">
+                      <li>MySQL</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div class="cv-subtitle light-green-text text-darken-3">
+                    Other Software
+                  </div>
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle">Multimedia</span>
+                    <ul class="cv-list browser-default">
+                      <li>Inkscape</li>
+                      <li>Adobe Illustrator</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="experience" class="row scrollspy">
+              <div class="cv-title text-right col s3 l3">WORK EXPERIENCE</div>
+              <div class="text-left col s9 l9">
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >MATHEMATICS AND PROGRAMMING TEACHER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2021-01 - 2021-05"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">
+                    INTERNATIONAL STUDENTS GATHERED AT FIRAT UNIVERSITY
+                  </div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Taught Mathematics 1-2 courses, differential equations,
+                        statistics, and probability to 100 students at Al-Furat
+                        University. Additionally, provided lessons to first and
+                        second-year students in the Faculty of Mathematics.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >HEAD OF THE ARTIFICIAL INTELLIGENCE TEAM (PRACTIC)</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2022-12 - 2023-03"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">FIRAT UNIVERSITY</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Supervised two projects as the leader of teams
+                        representing the university in the international
+                        Teknofest competition. Prepared two projects in
+                        artificial intelligence:
+                      </li>
+                      <li>First project: Focused on assisting blind people.</li>
+                      <li>
+                        Second project: Aimed at integrating AI into the
+                        agricultural sector.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2023-03 - 2023-08"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">TAM-MED PRIVATE HOSPITAL</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Developed a comprehensive system for the hospital,
+                        including:
+                        <ul>
+                          <li>Home page</li>
+                          <li>Appointment booking platform</li>
+                          <li>Distance learning platform for hospital staff</li>
+                          <li>
+                            Live chat service for direct communication with the
+                            information office
+                          </li>
+                          <li>Statistics system and other features</li>
+                        </ul>
+                      </li>
+                      <li>
+                        The website attracted over 12,500 visitors within two
+                        weeks of launch.
+                      </li>
+                      <li>Website link: tam-med.com.tr</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2023-08 - 2023-12"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">SPANISH STORES</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>Designed two simultaneous websites:</li>
+                      <li>A system for a mobile phone store.</li>
+                      <li>
+                        A system for a grocery store with electronic payment
+                        functionality and shipment tracking.
+                      </li>
+                      <li>
+                        Both sites were responsive and available in four
+                        languages: Arabic, Turkish, English, and Spanish.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2023-12 - 2024-02"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">
+                    TURKISH RESTAURANT IN TÜRKİYE
+                  </div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Developed a system for a Turkish restaurant in Istanbul,
+                        featuring:
+                      </li>
+                      <li>Table reservation</li>
+                      <li>Order delivery</li>
+                      <li>Statistics for the restaurant owner</li>
+                      <li>Employee management</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <div>
+                    <span class="cv-subtitle light-green-text text-darken-3"
+                      >WEB DEVELOPER</span
+                    >
+                    <span
+                      class="new badge light-green"
+                      data-badge-caption="2024-03 - 2024-08"
+                    ></span>
+                  </div>
+                  <div class="cv-sub grey-text">RELEEVANT</div>
+                  <div class="col s12 l12">
+                    <ul class="cv-list browser-default">
+                      <li>
+                        Designed and developed all user interfaces and
+                        algorithms for slot games.
+                      </li>
+                      <li>
+                        Ensured optimal functionality and user experience
+                        through extensive testing and iteration.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="education" class="row scrollspy">
+              <div class="cv-title text-right col s12 l3">Education</div>
+              <div class="text-left col s12 l9">
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >Firat University</span
+                  ><span class="cv-spctext grey-text">Turkey</span>
+                  <span
+                    class="new badge light-green"
+                    data-badge-caption="2020-08 - 2024-08"
+                  ></span>
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Bachelor's Degree in Software Engineering</span
+                    >
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >University of Malaga</span
+                  ><span class="cv-spctext grey-text"> Spain</span>
+                  <span
+                    class="new badge light-green"
+                    data-badge-caption="2020-08 - Present"
+                  ></span>
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Bachelor's Degree in Software Engineering</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="honoraward" class="row scrollspy">
+              <div class="cv-title text-right col s12 l3">Honors/Awards</div>
+              <div class="text-left col s12 l9">
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >Academic</span
+                  >
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Consistent Dean's Lister for 6 semesters.</span
+                    >
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="col s12 l12">
+                  <span class="cv-subtitle light-green-text text-darken-3"
+                    >National Collegiate Competition</span
+                  >
+                  <div class="col s12 l12">
+                    <span class="cv-listtitle"
+                      >Won as 2<sup>nd</sup> runner-up in Into Programming
+                      Senior Division in STI Tagisan ng Talino-Nationals
+                      Finals.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cv-backtotop" class="fixed-action-btn hide">
+        <a href="#fullname" class="btn-floating btn-large deep-orange hoverable"
+          ><i class="fas fa-arrow-up"></i
+        ></a>
+        <ul></ul>
+      </div>
+    </main>
+    <!-- jQuery -->
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

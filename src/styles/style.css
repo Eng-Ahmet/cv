@@ -1,0 +1,275 @@
+body {
+  font-family: Verdana, Roboto, Open Sans;
+  font-size: 12px;
+}
+
+main {
+  padding-left: 300px; /* Adjust to account for the fixed header */
+}
+
+i {
+  vertical-align: middle;
+}
+
+.cv-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.cv-spclink {
+  font-weight: bold !important;
+}
+
+ul > li,
+ol > li {
+  text-align: justify;
+}
+
+.cv-co {
+  text-align: justify;
+}
+
+.cv-topborder {
+  height: 15px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.cv-photowrapper {
+  width: 125px;
+  padding: 5px;
+  border-radius: 2px;
+  margin: auto;
+}
+
+.cv-personalinfo {
+  font-weight: bold;
+}
+
+.cv-title {
+  font-family: Orbitron, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cv-subtitle {
+  font-family: Orbitron, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cv-sub {
+  font-weight: bold;
+}
+
+.cv-listtitle {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.cv-list {
+  margin-top: 0;
+}
+
+.cv-spctext {
+  font-style: italic;
+}
+
+.new.badge {
+  font-size: 8px;
+}
+
+.text-right {
+  text-align: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.cv-pinfogroup {
+  text-align: center;
+}
+
+.cv-hide {
+  animation: toggleHide 0.2s ease-in-out forwards;
+}
+
+.cv-show {
+  animation: toggleShow 0.3s ease-in-out forwards;
+}
+
+@keyframes toggleShow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes toggleHide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@media (min-width: 993px) {
+  .text-right {
+    text-align: right;
+  }
+
+  main {
+    padding-left: 300px;
+  }
+
+  .cv-pinfogroup {
+    text-align: left;
+  }
+
+  .cv-photowrapper {
+    margin: 0;
+    float: right;
+  }
+}
+
+.cv-printable {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 1in;
+  }
+
+  body {
+    font-size: 14px;
+    color: #000;
+    background: #fff;
+  }
+
+  header,
+  .cv-nonprintable {
+    display: none; /* Hide header and non-printable content */
+  }
+
+  .cv-printable {
+    display: block;
+  }
+
+  .cv-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .cv-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .cv-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .cv-listtitle {
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+  }
+
+  .cv-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .divider {
+    border: none;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+  }
+
+  .cv-photowrapper {
+    display: none; /* Hide photo for printing */
+  }
+
+  .cv-personalinfo {
+    font-size: 12px;
+    color: #333;
+  }
+
+  .card-content {
+    page-break-inside: avoid;
+  }
+
+  .col.s12 {
+    page-break-inside: avoid;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #424242; /* Matches grey darken-3 */
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.navbar-fixed {
+  display: none; /* Hide the top navbar for small screens */
+}
+
+.sidenav-trigger {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  main {
+    padding-left: 0;
+  }
+
+  .sidenav-fixed {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar-fixed {
+    display: block; /* Show the top navbar for small screens */
+  }
+
+  .sidenav-trigger {
+    display: block;
+    position: absolute;
+    left: 15px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .sidenav {
+    transform: translateX(-105%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidenav.open {
+    transform: translateX(0);
+  }
+}
+
+
+

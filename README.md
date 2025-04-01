@@ -1,6 +1,6 @@
-# CV Generator
+# CV
 
-This project is a **CV Generator** designed to create a professional and responsive online resume. It includes various sections to showcase personal information, career objectives, technical skills, work experience, education, courses, languages, and certificates. The CV can also be exported as a PDF.
+This project is a **CV** designed to create a professional and responsive online resume. It includes various sections to showcase personal information, career objectives, technical skills, work experience, education, courses, languages, and certificates. The CV can also be exported as a PDF.
 
 ## Features
 
@@ -86,7 +86,4 @@ This project is a **CV Generator** designed to create a professional and respons
    ```
 
 ## Demo
-
-1. Clone the repository:
-  [here](https://cv-generator-cag2.onrender.com)
-
+[here](https://cv-qjok.onrender.com/)
